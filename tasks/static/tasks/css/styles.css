@@ -1,0 +1,72 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F9FC;
+    color: #333333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 5px 0 8px rgb(174, 174, 174);
+    color: #333333;
+    /* text-align: center; */
+    padding: 3px 0;
+}
+
+footer {
+    background-color: #edf6ff;
+    color: #333333;
+    padding: 3px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.desk {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+    gap: 20px;
+}
+
+.box {
+    padding: 10px;
+    border: 3px solid #182633;
+    border-radius: 5px;
+    width: 33%;
+    box-shadow: 10px 10px 3px #D3D3D3;
+}
+
+.btn-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+button {
+    background-color: #182633;
+    color: #fff;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #0f1821;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: #333333;
+}

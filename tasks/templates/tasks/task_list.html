@@ -1,12 +1,44 @@
 {% extends 'tasks/base.html' %}
 
 {% block content %}
-<main>
-    <ul>
-        {% for task in task_list %}
-        <li><a href="{% url 'task-detail' task.pk %}">{{ task }}</a></li>
-        {% endfor %}
-    </ul>
+<div class="desk">
+    <!-- To do tasks -->
+    <h3>To do</h3>
+    <div class="box">
+        <ul>
+            {% for task in task_list %}
+                {% if task.status == 'to_do' %}
+                <li><a href="{% url 'task-detail' task.pk %}">{{ task }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <!-- In process tasks -->
+    <h3>In process</h3>
+    <div class="box">
+        <ul>
+            {% for task in task_list %}
+                {% if task.status == 'in_process' %}
+                <li><a href="{% url 'task-detail' task.pk %}">{{ task }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Finished tasks -->
+    <h3>Finished</h3>
+    <div class="box">
+        <ul>
+            {% for task in task_list %}
+                {% if task.status == 'finished' %}
+                <li><a href="{% url 'task-detail' task.pk %}">{{ task }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="btn-container">
     <a href="{% url 'task-create' %}"><button>Create new task</button></a>
-</main>
+</div>
 {% endblock %}
