@@ -1,4 +1,9 @@
 /* Общие стили */
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -11,6 +16,7 @@ body {
     margin: 0 auto;
 }
 
+/* Хедер и футер */
 header {
     background-color: #fff;
     box-shadow: 5px 0 8px rgb(174, 174, 174);
@@ -29,6 +35,7 @@ footer {
     text-align: center;
 }
 
+/* Доска и карточки для задач */
 .desk {
     display: flex;
     flex-direction: row;
@@ -36,37 +43,73 @@ footer {
     gap: 20px;
 }
 
+.box-container {
+    text-align: center;
+    width: 33%;
+}
+
 .box {
     padding: 10px;
     border: 3px solid #182633;
     border-radius: 5px;
-    width: 33%;
+    text-align: left;
     box-shadow: 10px 10px 3px #D3D3D3;
 }
 
+ul {
+    /* list-style-type: none; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: #333333;
+}
+
+li a:hover {
+    color: #0f1821;
+    text-decoration: underline;
+}
+
+/* Кнопки */
 .btn-container {
     margin: 0 auto;
     width: fit-content;
 }
 
-button {
+button, input[type=submit] {
     background-color: #182633;
     color: #fff;
     padding: 10px 80px;
     border: none;
     border-radius: 5px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #0f1821;
 }
 
-ul {
-    list-style-type: none;
+/* Стили для инпутов и textarea */
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-li a{
-    text-decoration: none;
-    color: #333333;
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #0f1821;
+    outline: none;
+}
+
+/* Стили для формы поиска */
+.search-form {
+    padding-top: 40px;
+    display: flex;
+    gap: 10px;
 }

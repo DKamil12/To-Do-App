@@ -3,8 +3,8 @@
 {% block title %} Delete {{ task }} {% endblock %}
 
 {% block content %}
-<h3>Are you sure you want to delete {{ task }}?</h3>
-<form method="post">
+<h3>Are you sure you want to delete "{{ task }}"?</h3>
+<form method="post" style="display: inline;">
     {% csrf_token %}
     <input type="submit" value="Yes, delete">
 </form>
